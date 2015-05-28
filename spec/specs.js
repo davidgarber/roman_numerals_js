@@ -24,6 +24,12 @@ describe("numeralL", function() {
 
 describe("numeralC", function() {
   it("converts any number between 90 and 399 to roman numeral", function() {
-    expect(numeralC(250)).to.equal("CCL")
+    expect(numeralC(247)).to.equal("CCXLVII")
+  });
+});
+
+describe("numeralD", function() {
+  it("converts and number between 400 and 899 to roman numeral", function() {
+    expect(numeralD(674)).to.equal("DCLXXIV")
   });
 });
