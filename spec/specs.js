@@ -15,3 +15,9 @@ describe("numeralX", function() {
     expect(numeralX(22)).to.equal("XXII");
   });
 });
+
+describe("numeralL", function() {
+  it("converts any number between 40 and 89 to roman numeral", function() {
+    expect(numeralL(73)).to.equal("LXXIII")
+  });
+});

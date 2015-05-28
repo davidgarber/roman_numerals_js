@@ -44,3 +44,20 @@ var numeralX = function(number) {
 
   return romanNumeral.join("");
 };
+
+var numeralL = function(number) {
+  var romanNumeral = [];
+
+  if(number === 50) {
+    romanNumeral.push("L")
+  } else if (number < 50) {
+      romanNumeral.push("XL");
+      number -= 40;
+      romanNumeral.push(numeralX(number));
+    } else {
+      romanNumeral.push("L");
+      number -= 50;
+      romanNumeral.push(numeralX(number));
+    }
+    return romanNumeral.join("");
+};
