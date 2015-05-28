@@ -21,3 +21,9 @@ describe("numeralL", function() {
     expect(numeralL(73)).to.equal("LXXIII")
   });
 });
+
+describe("numeralC", function() {
+  it("converts any number between 90 and 399 to roman numeral", function() {
+    expect(numeralC(250)).to.equal("CCL")
+  });
+});
