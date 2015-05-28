@@ -1,5 +1,5 @@
-describe("romanNumeral", function() {
+describe("belowFour", function() {
   it("will return I for the number 1", function() {
-    expect(romanNumeral(1)).to.equal("I");
+    expect(belowFour(1)).to.eql("I");
   });
 });

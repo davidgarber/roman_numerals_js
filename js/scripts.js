@@ -1,7 +1,8 @@
-var romanNumeral = function(number) {
-number = 1
-var symbol = "I"
-  if(number === 1) {
-    return symbol;
-  }
+// var romanNumeral = function(number) {
+var belowFour = function(number) {
+    var romanNumeral = "";
+    for(var i = 1; i <= number; i++){
+      romanNumeral += "I";
+    }
+    return romanNumeral;
 };
