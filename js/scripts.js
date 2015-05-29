@@ -46,7 +46,6 @@ var numeralX = function(number) {
 };
 
 var numeralL = function(number) {
-  debugger;
   var romanNumeral = [];
 
   if(number === 50) {
@@ -76,7 +75,7 @@ var numeralC = function(number) {
       romanNumeral.push("XC");
     } else if (number === 50) {
       romanNumeral.push("L");
-    } else if (number < 50) {
+    } else if (40 <= number < 50) {
         romanNumeral.push("XL");
         number -= 40;
         romanNumeral.push(numeralX(number));
@@ -101,20 +100,17 @@ var numeralD = function(number) {
       romanNumeral.push("C");
       number -= 100;
   }
-     if(number === 90) {
+  if(number === 90) {
     romanNumeral.push("XC");
-  } else if (number >= 50) {
-    romanNumeral.push("L");
-  } else if (number < 50) {
-    romanNumeral.push("XL");
-    number -= 40;
-    romanNumeral.push(numeralX(number));
-  } else {
+  } else if (50 <= number <= 89) {
     romanNumeral.push("L");
     number -= 50;
     romanNumeral.push(numeralX(number));
-  }
-  return romanNumeral.join("");
-
+  } else if (40 <= number <= 49) {
+      romanNumeral.push("XL");
+      number -= 40;
+      romanNumeral.push(numeralX(number));
+    }
+    return romanNumeral.join("");
 }
 };
