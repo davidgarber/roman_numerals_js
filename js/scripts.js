@@ -112,5 +112,38 @@ var numeralD = function(number) {
       romanNumeral.push(numeralX(number));
     }
     return romanNumeral.join("");
-}
+  }
+};
+
+var numeralM = function(number) {
+  var romanNumeral = [];
+
+  if(number === 900) {
+    romanNumeral.push("CM");
+  } else {
+    while (number >= 1000) {
+      romanNumeral.push("M");
+      number -= 1000;
+    } if (number >= 500) {
+      romanNumeral.push("D");
+      number -= 500;
+      while (number >= 100) {
+        romanNumeral.push("C");
+        number -= 100;
+    }
+    if(number === 90) {
+      romanNumeral.push("XC");
+    } else if (50 <= number <= 89) {
+      romanNumeral.push("L");
+      number -= 50;
+      romanNumeral.push(numeralX(number));
+    } else if (40 <= number <= 49) {
+        romanNumeral.push("XL");
+        number -= 40;
+        romanNumeral.push(numeralX(number));
+      }
+      return romanNumeral.join("");
+
+    }
+  }
 };
